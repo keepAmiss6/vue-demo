@@ -7,12 +7,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import clickColor from './components/ClickColor' ;
 export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
+  name:''
 }
 </script>
 
