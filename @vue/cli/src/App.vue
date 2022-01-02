@@ -1,19 +1,18 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ClickColor/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import ClickColor from './components/ClickColor' ;
+  export default {
+    name: 'App',
+    components: {
+      ClickColor
+    },
   }
-}
 </script>
 
 <style>
