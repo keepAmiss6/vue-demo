@@ -1,6 +1,20 @@
 <template>
   <div>
     <h2>案例二：图书列表</h2>
+    <div :style="{textAlign:'left'}">
+      <button @click="showfrom=true">新增</button>
+      <form v-show="showfrom" @submit.prevent>
+        <label for="name">书籍名称</label>
+        <input type="text" id="name" v-model="formData.name">
+        <label for="date">出版日期</label>
+        <input type="date" id="date" v-model="formData.date">
+        <label for="price">价格</label>
+        <input type="number" id="price" v-model="formData.price" min="1">
+        <label for="count">购买数量</label>
+        <input type="number" id="count" v-model="formData.count" min="1">
+        <button @click.prevent="submit">提交</button>
+      </form>
+    </div>
     <h3 v-if="books.length===0">购物车已清空</h3>
     <table v-else>
       <thead>
@@ -14,7 +28,7 @@
       <tbody>
       <tr v-for="(item,index) in books" :key="item.id">
         <td>{{item.id}}</td>
-        <td>{{item.name}}}</td>
+        <td>{{item.name}}</td>
         <td>{{item.date}}</td>
         <!--        让原有数据更加丰富：添加显示两个小数位-->
         <!--        方案一：表达式直接写-->
@@ -44,6 +58,13 @@
     name: "BookTable",
     data() {
       return {
+        formData: {
+          name: '',
+          date: '',
+          price: 0,
+          count: 1
+        },
+        showfrom: false,
         books: [{
           id: 1,
           name: '《算法导论》',
@@ -96,11 +117,17 @@
       },
       getPrice(price) {
         return price.toFixed(2)
+      },
+      submit() {
+        console.log(this.formData);
+        this.formData.id = this.books.length + 1;
+        this.formData.price=parseInt(this.formData.price)
+        this.books.push(this.formData)
       }
     },
     filters: {
       showPrice(price) {
-        return price.toFixed(2)
+        return price.toFixed && price.toFixed(2)
       }
     }
   }
@@ -123,5 +150,9 @@
     background-color: #f7f7f7;
     color: #5c6b77;
     font-weight: 600;
+  }
+
+  form label, input {
+    margin: 5px;
   }
 </style>
