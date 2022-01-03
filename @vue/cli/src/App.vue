@@ -2,15 +2,18 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <ClickColor/>
+    <BookTable/>
   </div>
 </template>
 
 <script>
   import ClickColor from './components/ClickColor' ;
+  import BookTable from "./components/BookTable";
   export default {
     name: 'App',
     components: {
-      ClickColor
+      ClickColor,
+      BookTable
     },
   }
 </script>

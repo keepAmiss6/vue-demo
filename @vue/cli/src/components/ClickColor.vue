@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>click color change</h2>
-    <ul>
+    <ul :style="{width:'200px'}">
       <li v-for="(item,index) in list" :key="item" :class="{active:currentIndex===index}"
           @click="changeColor(index)">{{item}}
       </li>
@@ -18,9 +18,9 @@
         currentIndex: 0
       }
     },
-    methods:{
-      changeColor(index){
-        this.currentIndex=index
+    methods: {
+      changeColor(index) {
+        this.currentIndex = index
       }
     }
   }
