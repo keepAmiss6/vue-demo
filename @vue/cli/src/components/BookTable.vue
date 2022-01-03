@@ -1,6 +1,8 @@
 <template>
   <div>
-    <table>
+    <h2>案例二：图书列表</h2>
+    <h3 v-if="books.length===0">购物车已清空</h3>
+    <table v-else>
       <thead>
       <th></th>
       <th>书籍名称</th>
@@ -14,14 +16,16 @@
         <td>{{item.id}}</td>
         <td>{{item.name}}}</td>
         <td>{{item.date}}</td>
-<!--        方案一：表达式直接写-->
-<!--        <td>¥ {{item.price.toFixed(2)}}</td>-->
-<!--        方案二：抽取成方法供多处调用-->
-<!--        <td>¥ {{getPrice(item.price)}}</td>-->
-<!--        方案三：使用过滤器 使用｜调用-->
+        <!--        让原有数据更加丰富：添加显示两个小数位-->
+        <!--        方案一：表达式直接写-->
+        <!--        <td>¥ {{item.price.toFixed(2)}}</td>-->
+        <!--        方案二：抽取成方法供多处调用-->
+        <!--        <td>¥ {{getPrice(item.price)}}</td>-->
+        <!--        方案三：使用过滤器 使用｜调用-->
         <td>¥ {{item.price | showPrice}}</td>
         <td>
-          <button @click="sub(index)">-</button>
+          <!--  通过disable属性来控制按钮是否可以点击，当它为1个的时候不能再减少-->
+          <button @click="sub(index)" v-bind:disabled="item.count===1">-</button>
           {{item.count}}
           <button @click="add(index)">+</button>
         </td>
@@ -87,15 +91,15 @@
       sub(index) {
         this.books[index].count--;
       },
-      removeBook(index){
-        this.books.splice(index,1)
+      removeBook(index) {
+        this.books.splice(index, 1)
       },
-      getPrice(price){
+      getPrice(price) {
         return price.toFixed(2)
       }
     },
-    filters:{
-      showPrice(price){
+    filters: {
+      showPrice(price) {
         return price.toFixed(2)
       }
     }

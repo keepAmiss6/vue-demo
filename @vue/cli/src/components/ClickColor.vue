@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>click color change</h2>
+    <h2>案例一：点击改变当前栏目为激活状态</h2>
     <ul :style="{width:'200px'}">
       <li v-for="(item,index) in list" :key="item" :class="{active:currentIndex===index}"
           @click="changeColor(index)">{{item}}
