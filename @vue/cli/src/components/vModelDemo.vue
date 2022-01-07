@@ -45,6 +45,24 @@
         <option value="榴莲">榴莲</option>
       </select>
       <p>您选择的水果是:{{fruits}}</p>
+      <h3>值绑定</h3>
+      <div>
+        <label v-for="item in originHobbies" :for="item" v-bind:key="item">
+          <input :value="item" type="checkbox" :id="item" v-model="hobbies">{{item}}
+        </label>
+        <p>您选择的爱好是：{{hobbies}}</p>
+      </div>
+      <h3>修饰符:lazy</h3>
+      <input type="text" v-model.lazy="message"/>
+      <p>{{message}}</p>
+      <h3>修饰符:number</h3>
+      <!--      v-module默认绑定的数据会变为字符，想要使其为数值，加number修饰符-->
+      <input type="number" v-model.number="age"/>
+      <p>{{age}}--{{typeof age}}</p>
+      <h3>修饰符:trim</h3>
+      <!--      v-module默认绑定的数据会变为字符，想要使其为数值，加number修饰符-->
+      <input type="number" v-model.trim="age"/>
+      <p>{{age}}--{{typeof age}}</p>
     </div>
   </div>
 </template>
@@ -54,12 +72,14 @@
     name: "vModelDemo",
     data() {
       return {
+        age: 0,
         message: 'hello',
         sex: '男',
-        isgree:false,//单选框对应布尔值
-        hobbies:[],//多选框对应数组
-        fruit:'葡萄',
-        fruits:[]
+        isgree: false,//单选框对应布尔值
+        hobbies: [],//多选框对应数组
+        fruit: '葡萄',
+        fruits: [],
+        originHobbies: ['足球', '篮球', '乒乓球', '高尔夫', '撸铁']
       }
     }
   }
