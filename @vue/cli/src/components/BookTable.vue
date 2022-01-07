@@ -98,10 +98,11 @@
     computed: {
       totalPrice() {
         let totalPrice = 0;
-        for (let item of this.books) {
-          totalPrice += item.price * item.count;
-        }
-
+        // for (let item of this.books) {
+        //   totalPrice += item.price * item.count;
+        // }
+        // 使用高阶函数
+        totalPrice = this.books.map(item => item.price * item.count).reduce((prv, item) => prv + item, 0);
         return totalPrice;
       }
     },
@@ -121,7 +122,7 @@
       submit() {
         console.log(this.formData);
         this.formData.id = this.books.length + 1;
-        this.formData.price=parseInt(this.formData.price)
+        this.formData.price = parseInt(this.formData.price)
         this.books.push(this.formData)
       }
     },
