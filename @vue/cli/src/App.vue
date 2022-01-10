@@ -6,19 +6,26 @@
     <BookTable/>
     <br/>
     <vModelDemo/>
+    <br/>
+    <cpn></cpn>
   </div>
 </template>
 
 <script>
   import ClickColor from './components/ClickColor' ;
   import BookTable from "./components/BookTable";
-  import vModelDemo from './components/vModelDemo'
+  import vModelDemo from './components/vModelDemo';
+
+  // import Component from './components/Component';
+  //1.创建组件构造器对象
+
   export default {
     name: 'App',
     components: {
       ClickColor,
       BookTable,
-      vModelDemo
+      vModelDemo,
+      // Component
     },
   }
 </script>
