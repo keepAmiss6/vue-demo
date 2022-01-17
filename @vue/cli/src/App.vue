@@ -15,6 +15,7 @@
     <TransParamIndex></TransParamIndex>
     <computer></computer>
     <common></common>
+    <pAndSvisit></pAndSvisit>
   </div>
 </template>
 
@@ -25,7 +26,8 @@
   import PropsTrans from './components/PropsTrans';
   import TransParamIndex from './assets/TransParam/index';
   import computer from "./components/computer";
-  import common from './assets/common'
+  import common from './assets/common';
+  import pAndSvisit from "./assets/pAndSvisit/pAndSvisit";
 
   // import Component from './components/Component';
   //1.创建组件构造器对象
@@ -44,8 +46,11 @@
       PropsTrans,
       TransParamIndex,
       computer,
-      common
+      common,
+      pAndSvisit
     },
+    methods:{
+    }
   }
 </script>
 
