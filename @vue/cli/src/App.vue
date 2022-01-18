@@ -16,6 +16,7 @@
     <computer></computer>
     <common></common>
     <pAndSvisit></pAndSvisit>
+    <slotIndex></slotIndex>
   </div>
 </template>
 
@@ -28,6 +29,7 @@
   import computer from "./components/computer";
   import common from './assets/common';
   import pAndSvisit from "./assets/pAndSvisit/pAndSvisit";
+  import slotIndex from "./assets/slot/index";
 
   // import Component from './components/Component';
   //1.创建组件构造器对象
@@ -47,7 +49,8 @@
       TransParamIndex,
       computer,
       common,
-      pAndSvisit
+      pAndSvisit,
+      slotIndex
     },
     methods:{
     }
