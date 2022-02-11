@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from "./router";
 const getOS = require('outils/getOS')
 const OS = getOS()
 Vue.prototype.Utils={OS:OS}
@@ -73,6 +74,7 @@ Vue.component('cpn-no-extend',{
 
 new Vue({
   el:'#app', //这样写，vue内部也是调用.$mount执行的。和.$mount方式效果一样
+  router,
   render: createElement => createElement(App),//render里的cpn元素也会替换掉#app元素
 });
 

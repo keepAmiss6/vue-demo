@@ -11,8 +11,17 @@
       <input slot="center" placeholder="我来替换具名插槽中间的">
     </slotDemo>
     <slotDemo></slotDemo>
-  </div>
 
+      <slotDemo>
+        <template slot-scope="slotProps">
+          <ul>
+            <li v-for="info in slotProps.data" :key="info"></li>
+          </ul>
+        </template>
+      </slotDemo>
+
+
+  </div>
 </template>
 
 <script>

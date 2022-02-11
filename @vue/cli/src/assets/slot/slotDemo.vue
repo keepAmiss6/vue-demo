@@ -13,12 +13,21 @@
     <div>
       <slot ></slot>
     </div>
+    <div>
+      <h2>作用域插槽</h2>
+      <slot :data="language"></slot>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "slotDemo"
+    name: "slotDemo",
+    data(){
+      return{
+        language:['js','java','python','node']
+      }
+    }
   }
 </script>
 
