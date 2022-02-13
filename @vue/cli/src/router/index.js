@@ -13,6 +13,11 @@ const router = new VueRouter({
   // 配置路由和组件之间的应用关系
   routes: [
     {
+      // 配置默认路径，由于网站第一次访问的默认路径为/或者空，可以重定向
+      path:'',
+      redirect:'/home'
+    },
+    {
       path: '/home',
       component: home
     },
@@ -26,7 +31,10 @@ const router = new VueRouter({
       path: '/slotdemo',
       component: slotIndex
     }
-  ]
+  ] ,
+  mode:'history',
+  // 修改
+  // linkActiveClass:'modify-class'
 })
 
 // 3 将router对象传入vue实例中
