@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slotDemo>我给插槽传个文本</slotDemo>
+    <slotDemo>我给插槽传个文本:{{$route.query.text}}</slotDemo>
     <slotDemo><button>我给插槽传个button元素</button></slotDemo>
     <slotDemo>
       <p>我是第一个内容</p>
