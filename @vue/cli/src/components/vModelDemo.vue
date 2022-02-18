@@ -81,6 +81,12 @@
         fruits: [],
         originHobbies: ['足球', '篮球', '乒乓球', '高尔夫', '撸铁']
       }
+    },
+    activated() {
+      console.log('由于包裹在keepalive组件中，所以进入时activated钩子被调用了vModelDemo');
+    },
+    deactivated() {
+      console.log('由于包裹在keepalive组件中，所以销毁时deactivated钩子被调用了vModelDemo');
     }
   }
 </script>

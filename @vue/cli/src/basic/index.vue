@@ -8,7 +8,11 @@
     <router-link to="/basic/smalldemo" tag="button">click demo</router-link>
     <router-link to="/basic/vmodeldemo" tag="button">v-model demo</router-link>
     </div>
-    <router-view></router-view>
+<!--    多个组件时，用逗号分割-->
+    <keep-alive exclude="ClickColor">
+      <router-view></router-view>
+    </keep-alive>
+
         <br/>
         <h2>案例四：全局组件/局部组件</h2>
         <cpn></cpn>

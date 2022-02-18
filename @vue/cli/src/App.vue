@@ -38,6 +38,11 @@
 </script>
 
 <style>
+  @media screen and (max-width: 800px) {
+    body {
+      background-color:lightblue;
+    }
+  }
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

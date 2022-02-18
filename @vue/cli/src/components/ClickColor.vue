@@ -22,6 +22,12 @@
       changeColor(index) {
         this.currentIndex = index
       }
+    },
+    activated() {
+      console.log('clickdemo的actived被调用');
+    },
+    deactivated() {
+      console.log('clickdemo的actived被调用');
     }
   }
 </script>
