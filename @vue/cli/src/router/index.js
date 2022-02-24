@@ -70,6 +70,9 @@ const router = new VueRouter({
       meta:{
         title:'插槽案例'
       }
+    }, {
+      path: '/toolbar',
+      component: ()=>(import('../components/toolbar/index'))
     }
   ] ,
   mode:'history',

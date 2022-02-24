@@ -7,6 +7,7 @@
       <router-link to="/bookdemo" tag="li" replace>图书馆案列</router-link>
 <!--      <router-link to="/slotdemo" tag="li" replace>插槽</router-link>-->
       <router-link :to="{path:'/slotdemo',query:{text:'我是通过路由的query传递过来的'}}" tag="li" replace>插槽</router-link>
+      <router-link to="/toolbar">toolbar通用工具类</router-link>
 <!--      <li @click="slotClick">插槽</li>-->
     </div>
     <div class="content" style="background:honeydew;flex: 1;padding-left: 10px">
