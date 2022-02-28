@@ -2,22 +2,22 @@
   <div class="tab-bar-index">
     <div>content</div>
     <div class="tab-bar">
-      <TabbarItem class="item">
+      <TabbarItem class="item" link="/home">
         <img src="../../assets/tabbar/home.svg" slot="item-img">
         <img src="../../assets/tabbar/home_active.svg" slot="item-img-active">
         <div slot="item-text">首页</div>
       </TabbarItem>
-      <TabbarItem class="item">
+      <TabbarItem class="item" link="/catagory">
         <img src="../../assets/tabbar/category.svg" slot="item-img">
         <img src="../../assets/tabbar/category_active.svg" slot="item-img-active">
         <div slot="item-text">分类</div>
       </TabbarItem>
-      <TabbarItem class="item">
+      <TabbarItem class="item" link="/shopcart">
         <img src="../../assets/tabbar/shopcart.svg" slot="item-img">
         <img src="../../assets/tabbar/shopcart_active.svg" slot="item-img-active">
         <div slot="item-text">购物车</div>
       </TabbarItem>
-      <TabbarItem class="item">
+      <TabbarItem class="item" link="/profile">
         <img src="../../assets/tabbar/profile.svg" slot="item-img">
         <img src="../../assets/tabbar/profile_active.svg" slot="item-img-active">
         <div slot="item-text">我的</div>

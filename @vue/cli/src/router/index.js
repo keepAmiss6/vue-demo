@@ -71,8 +71,8 @@ const router = new VueRouter({
         title:'插槽案例'
       }
     }, {
-      path: '/toolbar',
-      component: ()=>(import('../components/toolbar/index'))
+      path: '/upload',
+      component: ()=>import('../views/upload')
     }
   ] ,
   mode:'history',

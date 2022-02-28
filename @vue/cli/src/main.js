@@ -1,12 +1,15 @@
 import Vue from 'vue'
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 import App from './App.vue'
 import router from "./router";
 const getOS = require('outils/getOS')
 const OS = getOS()
+
 Vue.prototype.Utils={OS:OS}
 //作用：查看构建信息
 Vue.config.productionTip = false;
-
+Vue.use(ElementUI);
 
 /**
  * 注册一全局组件：构造、注册、使用
